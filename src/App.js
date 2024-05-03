@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import WeatherCard from './component/weatherCard';
 import "./App.css";
 
 
@@ -34,7 +35,7 @@ const App = () => {
 
       setTempInfo(myNewWeatherInfo);
 
-      console.log(tempInfo);
+      // console.log(tempInfo);
     }
     catch(error){
       console.log(error);
@@ -54,6 +55,8 @@ const App = () => {
           </button>
         </div>
       </div>
+
+      <WeatherCard tempInfo={tempInfo} />
     </>
   )
 }
